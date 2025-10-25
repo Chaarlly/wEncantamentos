@@ -9,18 +9,6 @@ Runa:
     - '&fClique com esta runa em cima do item que'
     - '&fvocê deseja extrair os encantamentos.'
 
-Caixa:
-  name: '&bLivro de Encantamentos Divinos'
-  lore:
-    - '&7Ao abrir este livro, você receberá um'
-    - '&7dos Livros de Encantamento Especiais!'
-    - ' '
-    - '&aClique para abrir!'
-  #Encantamentos padrões adicionais que podem vir na caixa!
-  #Formato -> ENCANTAMENTO-NÍVEL
-  enchantments: {}
-  #- 'DAMAGE_ALL-5'
-
 AutoReparacao:
   active: true
   name: '&6Livro Especial'

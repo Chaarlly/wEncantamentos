@@ -1,7 +1,6 @@
 package com.github.charlly.wEcantamentos.listeners;
 
 import com.github.charlly.wEcantamentos.Main;
-import com.github.charlly.wEcantamentos.manager.EnchantManager;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
