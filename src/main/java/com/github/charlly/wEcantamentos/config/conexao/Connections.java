@@ -1,38 +1,38 @@
 package com.github.charlly.wEcantamentos.config.conexao;
 
 import com.github.charlly.wEcantamentos.Main;
-import com.github.charlly.wEcantamentos.config.util.MensagensUtil;
+import com.github.charlly.wEcantamentos.config.util.MessageUtil;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class Conexao {
+public class Connections {
 
     public static Connection con = null;
 
     public static void open() {
         Main main = Main.getPlugin(Main.class);
 
-        String type = main.getConfiguracao().getString("database.type");
-        boolean enable = main.getConfiguracao().getBoolean("database.mysql.enable");
+        String type = main.getConfiguration().getString("database.type");
+        boolean enable = main.getConfiguration().getBoolean("database.mysql.enable");
 
         if (enable && type.equalsIgnoreCase("MySQL")) {
-            String host = main.getConfiguracao().getString("database.mysql.host");
-            String user = main.getConfiguracao().getString("database.mysql.user");
-            String password = main.getConfiguracao().getString("database.mysql.password");
-            Integer port = main.getConfiguracao().getInt("database.mysql.port");
-            String database = main.getConfiguracao().getString("database.mysql.database");
+            String host = main.getConfiguration().getString("database.mysql.host");
+            String user = main.getConfiguration().getString("database.mysql.user");
+            String password = main.getConfiguration().getString("database.mysql.password");
+            Integer port = main.getConfiguration().getInt("database.mysql.port");
+            String database = main.getConfiguration().getString("database.mysql.database");
 
             String url = "jdbc:mysql://" + host + ":" + port + "/" + database;
 
             try {
                 con = DriverManager.getConnection(url, user, password);
-                main.getLogger().info(MensagensUtil.prefix + "§aConexão com o banco de dados estabelecida!");
+                main.getLogger().info(MessageUtil.prefix + "§aConexão com o banco de dados estabelecida!");
 
             } catch (SQLException e) {
-                main.getLogger().info(MensagensUtil.prefix + "§cNão foi possível realizar a conexão com o banco de dados: " + e.getMessage());
+                main.getLogger().info(MessageUtil.prefix + "§cNão foi possível realizar a conexão com o banco de dados: " + e.getMessage());
                 e.printStackTrace();
             }
         }
@@ -42,9 +42,9 @@ public class Conexao {
         if (con != null) {
             try {
                 con.close();
-                Main.getPlugin(Main.class).getLogger().info(MensagensUtil.prefix + "§aConexão com o banco de dados fechada");
+                Main.getPlugin(Main.class).getLogger().info(MessageUtil.prefix + "§aConexão com o banco de dados fechada");
             } catch (SQLException e) {
-                Main.getPlugin(Main.class).getLogger().info(MensagensUtil.prefix + "§cErro para fechar a conexão: " + e.getMessage());
+                Main.getPlugin(Main.class).getLogger().info(MessageUtil.prefix + "§cErro para fechar a conexão: " + e.getMessage());
             }
         }
     }

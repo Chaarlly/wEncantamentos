@@ -3,7 +3,7 @@ package com.github.charlly.wEcantamentos.listeners;
 import com.github.charlly.wEcantamentos.Main;
 import com.github.charlly.wEcantamentos.config.util.ItemBuilder;
 import com.github.charlly.wEcantamentos.config.util.XPUtil;
-import com.github.charlly.wEcantamentos.view.FeiticeiroMenuView;
+import com.github.charlly.wEcantamentos.view.SorcererMenuView;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -16,18 +16,18 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.HashMap;
 
-public class FeiticeiroMenuListener implements Listener {
+public class SorcererMenuListener implements Listener {
 
     private final Main main;
 
-    public FeiticeiroMenuListener(Main main) {
+    public SorcererMenuListener(Main main) {
         this.main = main;
     }
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent e) {
         try {
-            if (!e.getView().getTitle().equals(FeiticeiroMenuView.TITLE_INVENTORY)) {
+            if (!e.getView().getTitle().equals(SorcererMenuView.TITLE_INVENTORY)) {
                 return;
             }
             e.setCancelled(true);
@@ -63,19 +63,19 @@ public class FeiticeiroMenuListener implements Listener {
         String tipoId = "";
 
         if (loreTipo.contains("Simples")) {
-            custo = main.getConfiguracao().getInt("CustoLivro.Simples");
+            custo = main.getConfiguration().getInt("CustoLivro.Simples");
             tipoNomeDisplay = "Simples";
             tipoId = "Simples";
         } else if (loreTipo.contains("Normal")) {
-            custo = main.getConfiguracao().getInt("CustoLivro.Normal");
+            custo = main.getConfiguration().getInt("CustoLivro.Normal");
             tipoNomeDisplay = "Normal";
             tipoId = "Normal";
         } else if (loreTipo.contains("Intermediário")) {
-            custo = main.getConfiguracao().getInt("CustoLivro.Intermediario");
+            custo = main.getConfiguration().getInt("CustoLivro.Intermediario");
             tipoNomeDisplay = "Intermediário";
             tipoId = "Intermediario";
         } else if (loreTipo.contains("Avançado")) {
-            custo = main.getConfiguracao().getInt("CustoLivro.Avancado");
+            custo = main.getConfiguration().getInt("CustoLivro.Avancado");
             tipoNomeDisplay = "Avançado";
             tipoId = "Avancado";
         } else {
@@ -120,12 +120,12 @@ public class FeiticeiroMenuListener implements Listener {
         int custo = 0;
         int playerXpTotal = XPUtil.getTotalExperience(p);
 
-        if (loreCusto.contains(formatarNumero(main.getConfiguracao().getInt("CustoFrasco.Simples")))) {
-            custo = main.getConfiguracao().getInt("CustoFrasco.Simples");
-        } else if (loreCusto.contains(formatarNumero(main.getConfiguracao().getInt("CustoFrasco.Normal")))) {
-            custo = main.getConfiguracao().getInt("CustoFrasco.Normal");
-        } else if (loreCusto.contains(formatarNumero(main.getConfiguracao().getInt("CustoFrasco.Avancado")))) {
-            custo = main.getConfiguracao().getInt("CustoFrasco.Avancado");
+        if (loreCusto.contains(formatarNumero(main.getConfiguration().getInt("CustoFrasco.Simples")))) {
+            custo = main.getConfiguration().getInt("CustoFrasco.Simples");
+        } else if (loreCusto.contains(formatarNumero(main.getConfiguration().getInt("CustoFrasco.Normal")))) {
+            custo = main.getConfiguration().getInt("CustoFrasco.Normal");
+        } else if (loreCusto.contains(formatarNumero(main.getConfiguration().getInt("CustoFrasco.Avancado")))) {
+            custo = main.getConfiguration().getInt("CustoFrasco.Avancado");
         } else if (loreCusto.contains(formatarNumero(playerXpTotal))) {
             custo = playerXpTotal;
         } else {

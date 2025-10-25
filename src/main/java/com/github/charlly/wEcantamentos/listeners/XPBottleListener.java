@@ -71,17 +71,15 @@ public class XPBottleListener implements Listener {
                 p.setItemInHand(null);
             }
 
-            // 2. CORREÇÃO AQUI:
-            // Pega o XP total CORRETO
             int currentXP = XPUtil.getTotalExperience(p);
-            // Define o XP total CORRETO
+
             XPUtil.setTotalExperience(p, currentXP + xpAmount);
 
             p.playSound(p.getLocation(), Sound.ORB_PICKUP, 1f, 1.2f);
             p.sendMessage("§aVocê resgatou " + String.format("%,d", xpAmount).replace(",", ".") + " XP!");
 
         } catch (Exception ex) {
-            e.getPlayer().sendMessage("§cOcorreu um erro ao usar este frasco. Avise um admin.");
+            e.getPlayer().sendMessage("§cOcorreu um erro ao usar este frasco.");
             ex.printStackTrace();
         }
     }

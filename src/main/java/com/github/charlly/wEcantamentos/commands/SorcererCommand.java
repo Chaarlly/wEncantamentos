@@ -1,17 +1,17 @@
 package com.github.charlly.wEcantamentos.commands;
 
 import com.github.charlly.wEcantamentos.Main;
-import com.github.charlly.wEcantamentos.view.FeiticeiroMenuView; // Importe o seu menu
+import com.github.charlly.wEcantamentos.view.SorcererMenuView; // Importe o seu menu
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class ComandoFeiticeiro implements CommandExecutor {
+public class SorcererCommand implements CommandExecutor {
 
     private final Main main;
 
-    public ComandoFeiticeiro(Main main) {
+    public SorcererCommand(Main main) {
         this.main = main;
     }
 
@@ -24,7 +24,7 @@ public class ComandoFeiticeiro implements CommandExecutor {
 
         Player p = (Player) sender;
 
-        new FeiticeiroMenuView(main).open(p);
+        new SorcererMenuView(main).open(p);
         return true;
     }
 }

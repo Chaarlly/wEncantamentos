@@ -1,8 +1,8 @@
 package com.github.charlly.wEcantamentos;
 
-import com.github.charlly.wEcantamentos.commands.ComandoFeiticeiro;
+import com.github.charlly.wEcantamentos.commands.SorcererCommand;
 import com.github.charlly.wEcantamentos.config.api.W_Config;
-import com.github.charlly.wEcantamentos.config.conexao.Conexao;
+import com.github.charlly.wEcantamentos.config.conexao.Connections;
 import com.github.charlly.wEcantamentos.listeners.*;
 import com.github.charlly.wEcantamentos.config.task.AutoSaveTask;
 import lombok.Getter;
@@ -17,21 +17,21 @@ public class Main extends JavaPlugin {
     @Getter
     private static Main plugin;
 
-    private W_Config configuracao;
-    private W_Config mensagens;
-    private W_Config encantamentos;
+    private W_Config configuration;
+    private W_Config messages;
+    private W_Config enchants;
 
     @Override
     public void onEnable() {
         plugin = this;
 
-        configuracao = new W_Config("configuracao.yml");
-        mensagens = new W_Config("mensagens.yml");
-        encantamentos = new W_Config("encantamentos.yml");
+        configuration = new W_Config("configuracao.yml");
+        messages = new W_Config("mensagens.yml");
+        enchants = new W_Config("encantamentos.yml");
 
-        configuracao.saveDefaultConfig();
-        mensagens.saveDefaultConfig();
-        encantamentos.saveDefaultConfig();
+        configuration.saveDefaultConfig();
+        messages.saveDefaultConfig();
+        enchants.saveDefaultConfig();
 
         loadConexao();
         loadListeners();
@@ -41,39 +41,37 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        Conexao.close();
+        Connections.close();
         HandlerList.unregisterAll(this);
     }
 
     private void loadCommands() {
-        getCommand("feiticeiro").setExecutor(new ComandoFeiticeiro(this));
+        getCommand("feiticeiro").setExecutor(new SorcererCommand(this));
     }
 
     private void loadListeners() {
         final PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new PlayerJoinListener(this), this);
         pm.registerEvents(new PlayerQuitListener(this), this);
-        pm.registerEvents(new FeiticeiroMenuListener(this), this);
+        pm.registerEvents(new SorcererMenuListener(this), this);
         pm.registerEvents(new XPBottleListener(this), this);
-        pm.registerEvents(new BookListener(this), this);
-        pm.registerEvents(new EnchantApplyListener(this),this);
         pm.registerEvents(new PlayerDeathListener(this), this);
     }
 
     private void loadConexao() {
-        if (configuracao.getBoolean("database.mysql.enable")) {
-            Conexao.open();
-            Conexao.createTables();
+        if (configuration.getBoolean("database.mysql.enable")) {
+            Connections.open();
+            Connections.createTables();
         }
     }
 
     private void startAutoSaveTask() {
-        long delay = 20L * 60 * this.getConfiguracao().getInt("AutoSave.primeiro");
-        long period = 20L * 60 * this.getConfiguracao().getInt("AutoSave.periodico");
+        long delay = 20L * 60 * this.getConfiguration().getInt("AutoSave.primeiro");
+        long period = 20L * 60 * this.getConfiguration().getInt("AutoSave.periodico");
         new AutoSaveTask().runTaskTimerAsynchronously(this, delay, period);
     }
 
     public W_Config getEncantamentosConfig() {
-        return encantamentos;
+        return enchants;
     }
 }

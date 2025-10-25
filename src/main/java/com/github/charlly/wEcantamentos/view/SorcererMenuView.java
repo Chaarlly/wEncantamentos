@@ -10,15 +10,15 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-public class FeiticeiroMenuView {
+public class SorcererMenuView {
 
     private final Main main;
     private final W_Config config;
     public static String TITLE_INVENTORY = "§8Feiticeiro";
 
-    public FeiticeiroMenuView(Main main) {
+    public SorcererMenuView(Main main) {
         this.main = main;
-        this.config = main.getConfiguracao();
+        this.config = main.getConfiguration();
     }
 
     public void open(Player player) {

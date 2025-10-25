@@ -21,7 +21,7 @@ public class PlayerJoinListener implements Listener {
         Player p = e.getPlayer();
 
         if (!repository.hasPlayerData(p.getUniqueId())) {
-            int levelInicial = main.getConfiguracao().getInt("Encantamentos.level-inicial");
+            int levelInicial = main.getConfiguration().getInt("Encantamentos.level-inicial");
             p.setLevel(levelInicial);
             p.setExp(0.0f);
             repository.createPlayerData(p.getUniqueId(), levelInicial);

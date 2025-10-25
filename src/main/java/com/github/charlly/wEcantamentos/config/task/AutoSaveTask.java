@@ -1,6 +1,7 @@
 package com.github.charlly.wEcantamentos.config.task;
 
 import com.github.charlly.wEcantamentos.Main;
+import com.github.charlly.wEcantamentos.config.conexao.Connections;
 import com.github.charlly.wEcantamentos.repository.XPRepository;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -12,7 +13,7 @@ public class AutoSaveTask extends BukkitRunnable {
 
     @Override
     public void run() {
-        if (com.github.charlly.wEcantamentos.config.conexao.Conexao.con == null) {
+        if (Connections.con == null) {
             return;
         }
 
@@ -24,7 +25,7 @@ public class AutoSaveTask extends BukkitRunnable {
             }
         }
 
-        if (Main.getPlugin().getConfiguracao().getBoolean("AutoSave.avisar-console")) {
+        if (Main.getPlugin().getConfiguration().getBoolean("AutoSave.avisar-console")) {
             Bukkit.getLogger().info("[wEcantamentos] Níveis de XP salvos (Autosave).");
         }
 
