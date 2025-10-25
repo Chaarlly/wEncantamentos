@@ -1,0 +1,6 @@
+name: wEcantamentos
+version: '1.0-SNAPSHOT'
+main: com.github.charlly.wEcantamentos.Main
+commands:
+  reciclador:
+  feiticeiro:

@@ -1,0 +1,32 @@
+#Plugin criado por wStorePlugins
+
+database:
+  type: MySQL
+  mysql:
+    enable: true
+    host: mysql.rededust.com.br
+    user: u4_vENuYYj74i
+    password: 'H7biQni.apL34Kgl2YwyrR.2'
+    port: 3306
+    database: s4_wEncantamentos
+
+# Tempo para salvar o progresso de XP (Recomendado 5M)
+AutoSave:
+  primeiro: 5
+  periodico: 5
+  avisar-console: true
+
+Encantamentos:
+  level-inicial: 10
+
+# CUSTOS PARA O MENU /FEITICEIRO
+CustoLivro:
+  Simples: 1500
+  Normal: 2000
+  Intermediario: 2700
+  Avancado: 3500
+
+CustoFrasco:
+  Simples: 1000
+  Normal: 3000
+  Avancado: 5000

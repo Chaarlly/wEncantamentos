@@ -1,0 +1,95 @@
+# ====================================
+#   GITIGNORE PARA PROJETOS JAVA
+# ====================================
+
+# Compilação
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# Logs
+*.log
+
+# Diretórios de build
+/target/
+/build/
+/out/
+/bin/
+/dist/
+/classes/
+
+# Arquivos temporários do sistema
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# Arquivos de dependência gerados
+dependency-reduced-pom.xml
+
+# Configurações do Maven
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+.mvn/timing.properties
+
+# Configurações do Gradle
+.gradle/
+/build/
+/!gradle/wrapper/gradle-wrapper.jar
+
+# IDEs
+
+## IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+## Eclipse
+.project
+.classpath
+.settings/
+.loadpath
+
+## VS Code
+.vscode/
+.history/
+
+# Sistema operacional
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Linux
+*~
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Arquivos de testes temporários
+test-output/
+hs_err_pid*
+replay_pid*
+
+# Arquivos do Spring Boot
+spring.log
+
+# ====================================
+# FIM DO .gitignore
+# ====================================

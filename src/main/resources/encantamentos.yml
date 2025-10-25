@@ -1,0 +1,626 @@
+Runa:
+  name: '&eRuna de Extração'
+  lore:
+    - '&7Ao utiliar esta runa em um item,'
+    - '&7todos os seus encantamentos especiais'
+    - '&7serão transformados em livros.'
+    - ' '
+    - '&eComo utilizar?'
+    - '&fClique com esta runa em cima do item que'
+    - '&fvocê deseja extrair os encantamentos.'
+
+Caixa:
+  name: '&bLivro de Encantamentos Divinos'
+  lore:
+    - '&7Ao abrir este livro, você receberá um'
+    - '&7dos Livros de Encantamento Especiais!'
+    - ' '
+    - '&aClique para abrir!'
+  #Encantamentos padrões adicionais que podem vir na caixa!
+  #Formato -> ENCANTAMENTO-NÍVEL
+  enchantments: {}
+  #- 'DAMAGE_ALL-5'
+
+AutoReparacao:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Auto Reparação I'
+    - '&fEncanta: &7Espada e Ferramentas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fferramenta ou espada, tendo 5 diamantes'
+    - '&fou mais no inventário, o item se repara'
+    - '&fautomaticamente e a durabilidade retorna para 100%.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Quanto de durabilidade o item deverá ter para ser reparado
+  durability: 780
+  #Quantidade de diamantes necessários para reparar
+  diamonds: 5
+
+AntiGravidade:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7AntiGravidade I'
+    - '&fEncanta: &7Botas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fbota, o dano de queda será anulado.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+
+BilionarioI:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Bilionario I'
+    - '&fEncanta: &7Espadas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fespada, o dano causado tem o adicional '
+    - '&fde 3.0, mas tem o custo de 750 coins.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Quanto de money é necessário para dar o dano adicional
+  cost: 750.0
+  #Quanto de dano adicional será adicionado
+  damage: 3.0
+
+BilionarioII:
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Bilionario II'
+    - '&fEncanta: &7Espadas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fespada, o dano causado tem o adicional '
+    - '&fde 4.5, mas tem o custo de 1.500 coins.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Quanto de money é necessário para dar o dano adicional
+  cost: 1500.0
+  #Quanto de dano adicional será adicionado
+  damage: 4.5
+
+Bypass:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Bypass I'
+    - '&fEncanta: &7Espadas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fespada, você tem a chance de receber'
+    - '&fo efeito de Velocidade ao batalhar.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Porcentagem do efeito ser adicionado
+  percentage: 0.01
+  #Quanto tempo será o efeito (em segundos)
+  timer: 3
+  #Level do efeito
+  amplifier: 1
+  actionbar: '&aVocê recebou o efeito de Velocidade I'
+
+Divergencia:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Divergência I'
+    - '&fEncanta: &7Espadas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fespada, quando você defender, faz o'
+    - '&fdano recebido ser reduzido em 50%.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Por quanto será divido o dano
+  divider: 2.0
+  actionbar: '&aVocê recebeu &c-50% &ade dano ao defender'
+
+DrenagemI:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Drenagem I'
+    - '&fEncanta: &7Arcos'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em seu'
+    - '&farco, ao atingir seu oponente, tenha a'
+    - '&fchance de deixá-lo com o efeito de Lentidão.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Porcentagem de ser adicionado o efeito
+  percentage: 5.0
+  #Quanto tempo será o efeito (em segundos)
+  timer: 5
+  #Level do efeito
+  amplifier: 1
+  actionbar: '&aVocê acertou o player &f%player% &ae causou o efeito de lentidão.'
+
+DrenagemII:
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Drenagem II'
+    - '&fEncanta: &7Arcos'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em seu'
+    - '&farco, ao atingir seu oponente, tenha a'
+    - '&fchance de deixá-lo com o efeito de Lentidão'
+    - '&fe você recebe o efeito de Velocidade.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Porcentagem de ser adicionado o efeito
+  percentage: 5.0
+  speed:
+    #Quanto tempo será o efeito (em segundos)
+    timer: 5
+    #Level do efeito
+    amplifier: 1
+  slow:
+    #Quanto tempo será o efeito (em segundos)
+    timer: 5
+    #Level do efeito
+    amplifier: 1
+  actionbar: '&aVocê acertou o player &f%player% &ae causou o efeito de lentidão.'
+
+Dureza:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Dureza I'
+    - '&fEncanta: &7Todos os itens'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em seu'
+    - '&fitem, tenha a chance de não perder'
+    - '&fpontos de durabilidade ao utilizar.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Porcentagem de não perder pontos de durabilidade
+  percentage: 20.0
+
+Execucao:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Execução I'
+    - '&fEncanta: &7Espadas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fespada, ao deixar um inimigo com poucos'
+    - '&fpontos de vida, o jogador é executado.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Quanto de vida ele tem que estar para ser executado
+  #1 -> meio coração
+  #2 -> 1 coração
+  health: 3
+
+ForcaBruta:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Força Bruta I'
+    - '&fEncanta: &7Picaretas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fpicareta, se torna possível quebrar bedrock.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+
+Furia:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Fúria I'
+    - '&fEncanta: &7Espadas e Machados'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fespada ou machado, tenha a chance de'
+    - '&fdobrar o dano causado em seu inimigo.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Porcentagem de dobrar o dano causado
+  percentage: 10.0
+
+Garimpeiro:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Garimpeiro I'
+    - '&fEncanta: &7Picaretas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fpicareta, tenha a chance de ganhar'
+    - '&fdiamante enquanto minera carvão.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Porcentagem de ganhar diamante
+  percentage: 50.0
+
+Guilhotina:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Guilhotina I'
+    - '&fEncanta: &7Espadas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fespada, ignora 1.5 pontos de armadura'
+    - '&fde seu inimigo ao batalhar.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  actionbar: '&a1.5 pontos de armadura ignorado'
+  #Pontos de armadura que será ignorado
+  points: 1.5
+
+ImpactoCritico:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Impacto Crítico I'
+    - '&fEncanta: &7Machados'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em seu'
+    - '&fmachado, ao causar dano com um ataque'
+    - '&fcrítico, o inimigo receberá um dano adicional.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Quanto de dano adicional
+  damage: 2
+
+ImpetoDaBatalha:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Ímpeto da Batalha I'
+    - '&fEncanta: &7Espadas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fespada, ao atacar um inimigo algumas'
+    - '&fvezes sem ser atacado, ele receberá um'
+    - '&fdano adicional a cada vez que for atacado.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Quantos hits seguidos para dar o dano adicional
+  hits: 5
+  #Quanto de dano adicionar por hit
+  damage: 3.0
+
+Inteligencia:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Inteligência I'
+    - '&fEncanta: &7Todos os itens'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em seu'
+    - '&fitem, tenha a chance de receber o dobro'
+    - '&fde ganho de XP na habilidade do McMMO.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Porcentagem de dobrar o xp
+  percentage: 2.0
+  message: '&aO encantamento inteligência duplicou o xp ganho do mcmmo.'
+
+Latrocinio:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Latrocício I'
+    - '&fEncanta: &7Arcos'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em seu'
+    - '&farco, tenha a chance de roubar 2 corações'
+    - '&fda vida do seu inimigo (fora o dano do arco).'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Porcentagem de roubar os corações
+  percentage: 2.0
+  #Quanto de vida será roubado
+  #1 -> meio coração
+  #2 -> 1 coração
+  health: 4
+  actionbar: '&aVocê roubou 2 corações de &f%player%'
+
+Manto:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Manto I'
+    - '&fEncanta: &7Peitoral'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em seu'
+    - '&fpeitoral, você se torna imune ao fogo.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+
+Molas:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Molas I'
+    - '&fEncanta: &7Botas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fbota, ao pular você receberá Super Pulo.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Quanto tempo será o efeito (em segundos)
+  timer: 5
+  #Level do efeito
+  amplifier: 1
+
+PerseguicaoIncansavel:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Perseguição Incansável I'
+    - '&fEncanta: &7Botas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fbota, recebe Velocidade para correr'
+    - '&fatrás de seu inimigo com a proteção desviada.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Level do efeito
+  amplifier: 3
+
+PrisaoMistica:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Prisão Mística I'
+    - '&fEncanta: &7Arcos'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em seu'
+    - '&farco, ao atingir seu inimigo, tenha a'
+    - '&fchance de o paralisar durante um curto tempo.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Porcentagem de paralisar o inimigo
+  percentage: 2.0
+  #Tempo que ele ficará paralisado (em segundos)
+  timer: 4
+  actionbar: '&aVocê prendeu seu inimigo por 4 segundos!'
+
+ProtecaoDivina:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Proteção Divina I'
+    - '&fEncanta: &7Armaduras'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&farmadura, ao ser atingido por vários'
+    - '&finimigos em curto período, você recebe'
+    - '&fResistência durante 10 segundos.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Quantos hits necessário para receber o efeito
+  hits: 25
+  #Quanto tempo será o efeito (em segundos)
+  timer: 10
+  #Level do efeito
+  amplifier: 1
+
+Rajada:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Rajada I'
+    - '&fEncanta: &7Arcos'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em seu'
+    - '&farco, após acertar algumas flechas, os'
+    - '&fos próximos tiros lançam uma rajada de 3 flechas.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Quantas flechas a mais serão lançadas
+  arrows: 3
+  #Quantos acertos para lançar as flechas adicionais
+  hits: 5
+
+Regenerar:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Regenerar I'
+    - '&fEncanta: &7Espadas e Machados'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fespada ou machado, ao clicar com o botão'
+    - '&fvocê irá receber o Regeneração por 10 segundos.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Quanto tempo será o efeito (em segundos)
+  timer: 10
+  #Level do efeito
+  amplifier: 1
+  #Delay para utilizar novamente
+  delay: 60
+  actionbar: '&aVocê recebeu o efeito de Regeneração.'
+  wait: '&cAguarde mais %delay% para utilizar novamente.'
+
+Ricochete:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Ricochete I'
+    - '&fEncanta: &7Arcos'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em seu'
+    - '&farco, ao atingir um inimigo, tenha a chance'
+    - '&fda flecha rebater em outro inimigo próximo.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Porcentagem de rebater a flecha
+  percentage: 10.0
+
+RouboDeVida:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Roubo de Vida I'
+    - '&fEncanta: &7Espadas e Machados'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fespada ou machado, tenha a chance de'
+    - '&froubar 3 corações de vida do seu inimigo.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Porcentagem de roubar os corações
+  percentage: 10.0
+  #Quantos corações serão roubados
+  #1 -> meio coração
+  #2 -> 1 coração
+  health: 6
+  message1: '&a~~ Você roubou a vida do seu inimigo ~~'
+  message2: '&c~~ Sua vida foi roubada ~~'
+
+SabedoriaDoDragao:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Sabedoria do Dragão I'
+    - '&fEncanta: &7Todos os itens'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em seu'
+    - '&fitem, seus encantamentos terão seus '
+    - '&fníveis amplificados em 1 ponto.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Caso queira mudar o nível do encantamento do padrão
+  #basta adicionar o encantamento
+  enchantments:
+    DAMAGE_ALL: 7
+
+SedeDeSangue:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Sede de Sangue I'
+    - '&fEncanta: &7Espadas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fespada, ao causar uma certa quantidade de'
+    - '&fdano, você recupera uma parte da sua vida.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Quanto de dano será causado
+  damage: 5
+  #Quantos corações você recupera
+  health: 4
+  message: '&aVocê recebeu +2 corações por causar dano!'
+
+Sobrecarga:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Sobrecarga I'
+    - '&fEncanta: &7Espadas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fespada, você terá uma chance de soltar'
+    - '&fum raio em seu inimigo causando dano adicional.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Porcentagem de soltar o raio
+  percentage: 5.0
+
+SuperArea:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Super Área I'
+    - '&fEncanta: &7Picaretas e Pás'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fpicerta ou pá, ao quebrar um bloco os'
+    - '&fdemais blocos em volta serão quebrados.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+
+Tanker:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Tanker I'
+    - '&fEncanta: &7Peitoral'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em seu'
+    - '&fpeitoral, ao receber um dano de explosão'
+    - '&fele será totalmente ignorado.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+
+ToqueRapido:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Toque Rápido I'
+    - '&fEncanta: &7Picaretas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fpicerta, recebe Pressa ao quebrar blocos.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Level do efeito
+  amplifier: 1
+
+Traicoeiro:
+  active: true
+  name: '&6Livro Especial'
+  lore:
+    - '&fTipo: &7Traiçoeiro I'
+    - '&fEncanta: &7Espadas'
+    - ' '
+    - '&eComo funciona este encantamento?'
+    - '&fAo utilizar este encantamento em sua'
+    - '&fespada, irá causar 2 corações a mais de'
+    - '&fdano, mas existe 50% desse dano voltar em você.'
+    - ' '
+    - '&aUtilize uma bigorna para encantar.'
+  #Porcentagem de causar o dano
+  percentage: 50.0
+  #Quantos corações serão removidos
+  #1 -> meio coração
+  #2 -> 1 coração
+  health: 4
+  actionbar1: '&aVocê tirou &c2 corações &ade &f%player%'
+  actionbar2: '&aVocê perdeu &c2 corações'
